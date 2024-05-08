@@ -13,11 +13,17 @@ const Books = () => {
 
   if (books.length === 0) {
     return (
-      <div className="flex flex-col items-center justify-center h-screen">
-        <p className="text-2xl font-montserrat font-bold mb-4">Hold a sec!!</p>
+      <div
+        className="flex flex-col items-center justify-center h-screen"
+        style={{
+          backgroundImage:
+            "linear-gradient(to left top, #6f5f68, #85566a, #9c4a64, #b13a56, #c22541)",
+        }}
+      >
+        <p className="text-2xl font-montserrat font-bold mb-4 text-white">Hold a sec!!</p>
         <svg
           aria-hidden="true"
-          className="w-16 h-16 text-gray-200 animate-spin dark:text-gray-600 fill-black"
+          className="w-16 h-16 text-gray-200 animate-spin dark:text-gray-600 fill-white"
           viewBox="0 0 100 101"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -36,16 +42,24 @@ const Books = () => {
   }
 
   return (
-    <div className="text-center font-montserrat mt-4 p-4">
-      <p className="text-4xl font-bold mb-2">Explore the latest releases</p>
+    <div
+      className="text-center font-montserrat p-4"
+      style={{
+        backgroundImage:
+          "linear-gradient(to left top, #6f5f68, #85566a, #9c4a64, #b13a56, #c22541)",
+      }}
+    >
+      <p className="text-4xl font-bold mb-2 text-white">
+        Explore the latest releases
+      </p>
 
-      <div className="grid lg:grid-cols-3 sm:grid-cols-1 md:grid-cols-2 gap-4 p-4 items-center ">
+      <div className="grid lg:grid-cols-3 sm:grid-cols-1 md:grid-cols-2 gap-4 p-4 items-center">
         {books.map((el, i) => {
           return (
             <div
               key={i}
               onClick={() => handleBook(el.id)}
-              className="border border-gray-300 cursor-pointer rounded-md h-28 p-4 shadow-md transition duration-300 ease-in-out transform hover:scale-105 flex flex-col justify-center"
+              className="border bg-[#DDB6BD] border-gray-800 cursor-pointer rounded-md h-28 p-4 shadow-md transition duration-300 ease-in-out transform hover:scale-105 flex flex-col justify-center"
             >
               <p className="text-xl font-medium text-black hover:text-blue-600">
                 {el.title}

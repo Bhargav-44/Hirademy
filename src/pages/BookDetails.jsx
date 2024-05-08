@@ -14,11 +14,17 @@ const BookDetails = () => {
 
   if (!bookDetail || !bookDetail.authors) {
     return (
-      <div className="flex flex-col items-center justify-center h-screen">
-        <p className="text-2xl font-montserrat font-bold mb-4">Hold a sec!!</p>
+      <div
+        className="flex flex-col items-center justify-center h-screen"
+        style={{
+          backgroundImage:
+            "linear-gradient(to left top, #6f5f68, #85566a, #9c4a64, #b13a56, #c22541)",
+        }}
+      >
+        <p className="text-2xl font-montserrat font-bold mb-4 text-white">Hold a sec!!</p>
         <svg
           aria-hidden="true"
-          className="w-16 h-16 text-gray-200 animate-spin dark:text-gray-600 fill-black"
+          className="w-16 h-16 text-gray-200 animate-spin dark:text-gray-600 fill-white"
           viewBox="0 0 100 101"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -42,18 +48,26 @@ const BookDetails = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen">
-      <p className="text-4xl font-bold mb-10 text-center w-2/3">
+    <div
+      className="flex flex-col items-center justify-center h-screen"
+      style={{
+        backgroundImage:
+          "linear-gradient(to left top, #6f5f68, #85566a, #9c4a64, #b13a56, #c22541)",
+      }}
+    >
+      <p className="text-4xl font-bold mb-10 text-center text-white w-2/3">
         Learn more about, {bookDetail.title}
       </p>
-      <div className="w-auto font-montserrat bg-white shadow-xl shadow-gray-400 p-6 rounded-lg ">
+      <div className="w-auto font-montserrat bg-[#CDCBDA] shadow-xl shadow-gray-400 p-6 rounded-lg ">
         <p className="text-lg  mb-2">
           <span className="mr-1 font-semibold">ISBN:</span>
           {bookDetail.isbn}
         </p>
         <p className="text-lg  mb-2">
           <span className="mr-1 font-semibold">Page Count:</span>
-          {bookDetail.pageCount === 0 ? `Finding the count seems difficult!!` : bookDetail.pageCount}
+          {bookDetail.pageCount === 0
+            ? `Finding the count seems difficult!!`
+            : bookDetail.pageCount}
         </p>
         <div className="flex items-center mb-4">
           <span className="text-lg font-semibold mr-1">
